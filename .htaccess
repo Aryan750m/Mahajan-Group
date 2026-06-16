@@ -1,0 +1,22 @@
+# Apache URL Rewrite configurations for Mahajan Corporate
+# Map clean URLs to standard PHP scripts out-of-the-box on Hostinger
+
+RewriteEngine On
+
+# Ensure request isn't for an actual existing file or directory
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
+# Clean URL rules
+RewriteRule ^yoga$ yoga.php [L,QSA]
+RewriteRule ^real-estate$ real-estate.php [L,QSA]
+RewriteRule ^foods$ foods.php [L,QSA]
+RewriteRule ^social-work$ social-work.php [L,QSA]
+RewriteRule ^ngo$ ngo.php [L,QSA]
+RewriteRule ^channel-partner$ channel-partner.php [L,QSA]
+RewriteRule ^about$ about.php [L,QSA]
+RewriteRule ^contact$ contact.php [L,QSA]
+RewriteRule ^library$ library.php [L,QSA]
+RewriteRule ^suggestion$ suggestion.php [L,QSA]
+RewriteRule ^feedback$ feedback.php [L,QSA]
+RewriteRule ^donate$ ngo.php [L,QSA]
